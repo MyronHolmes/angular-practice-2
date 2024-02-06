@@ -14,7 +14,8 @@
             <td>{{ tempSalesPerson.firstName }}</td>
             <td>{{ tempSalesPerson.lastName }}</td>
             <td>{{ tempSalesPerson.email }}</td>
-            <td>{{ tempSalesPerson.salesVolume }}</td>
+            <!-- Currency angular pipe: only for formatting, not for converstions -->
+            <td>{{ tempSalesPerson.salesVolume | currency:'USD' }}</td>
             <td>
                 <!-- *ngIf = if statment. else block must be specified and displayed in new tag. -->
                 <div *ngIf="tempSalesPerson.salesVolume >= 30000; else myElseBlock">Yes</div>
